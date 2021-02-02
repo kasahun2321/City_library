@@ -27,19 +27,19 @@
                 </li>
                 <h1>|</h1>
                 <li class="nav-item">
-                    <a class="nav-link" href="frontend/About.html">
+                    <a class="nav-link" href="About.html">
                         <h4>About Us</h4>
                     </a>
                 </li>
                 <h1>|</h1>
                 <li class="nav-item">
-                    <a class="nav-link" href="Frontend/book_list.html">
+                    <a class="nav-link" href="book_list.html">
                         <h4>Books</h4>
                     </a>
                 </li>
                 <h1>|</h1>
                 <li class="nav-item">
-                    <a class="nav-link" href="frontend/virtualtour.html">
+                    <a class="nav-link" href="virtualtour.html">
                         <h4>Virtual tour</h4>
                     </a>
                 </li>
@@ -61,36 +61,37 @@
             <h3><a href="">new book form <span class="sup">&reg;</a></span></h3>
             <hr>
         </div>
- 
+  <p> <b>Note:</b>Form field marked with astrix (*)  are requiered</p>
         <!-- text content -->
         <div class="addbookform">
 
             <form>
                 <div class="form-group">
-                    <button type="button" class="btn btn btn-success">Add Book</button>
-                    <label for="formGroupExampleInput">Example label</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+                    <!-- <button type="button" class="btn btn btn-success">Add Book</button> -->
+                    <label for="formGroupExampleInput">* Book title</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter book title">
                   </div>
                 <div class="row">
                     <div class="col">
-                        <label for="formGroupExampleInput">Example label</label>
-                        <input type="text" class="form-control" placeholder="First name">
+                        <label for="formGroupExampleInput">* ISBN</label>
+                        <input type="text" class="form-control" placeholder="">
                     </div>
                     <div class="col">
-                        <label for="formGroupExampleInput">Example label</label>
-                        <input type="text" class="form-control" placeholder="Last name">
+                        <label for="formGroupExampleInput">* Over due fee per day</label>
+                        <input type="number" class="form-control" placeholder="0.00">
+                        
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
-                        <label for="formGroupExampleInput">Example label</label>
-                        <input type="text" class="form-control" placeholder="First name">
+                        <label for="formGroupExampleInput">* Publisher</label>
+                        <input type="text" class="form-control" placeholder="">
                     </div>
                     <div class="col">
-                        <label for="formGroupExampleInput">Example label</label>
-                        <input type="text" class="form-control" placeholder="Last name"><br>
-                        <button type="button" class="btn btn btn-success">submit</button>
+                        <label for="formGroupExampleInput">* Date Published</label>
+                        <input type="date" class="form-control" placeholder="mm/dd/yyyy"><br>
                         <button type="button" class="btn btn btn-danger">cancel</button>
+                        <button type="button" class="btn btn btn-success">submit</button>
                         
                     </div>
                 </div>

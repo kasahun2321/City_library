@@ -58,25 +58,83 @@
     <!-- wellcome mesaage  -->
     <div class="bodydiv">
         <div class="wellcome">
-            <h3><a href="">welcome to city Library <span class="sup">&reg;</a></span></h3>
+            <div class="row">
+                <div class="text-left">
+                    <h3><a href="">Books in our collection <span class="sup">&reg;</a></span></h3>
+                </div>
+                <div class="text-right">
+                    <button type="button" class="btn btn btn-success fa-pull-right">Add Book</button>
+                </div>
+            </div>
             <hr>
         </div>
-        demo table
-        <button type="button" class="btn btn btn-success" align="left">Add Book</button>
-        <img src="../image/books-list1.png" alt="home page image" width="100%" height="200px" />
-        <br>
         <!-- text content -->
         <div class="contentpage">
-            <p>
-                book list coming soon
-            </p>
+
+            <table class="table table-striped">
+
+                <thead>
+                    <tr>
+
+                        <th>#</th>
+                        <th>ISBN</th>
+                        <th>Book Title</th>
+                        <th>Over due fee</th>
+                        <th>Publisher</th>
+                        <th>Date Published</th>
+
+                    </tr>
+
+
+                </thead>
+                <tbody id="data">
+
+                </tbody>
+
+
+
+            </table>
 
 
         </div>
+        <div class="fetchdata">
+            <script>
+                let data;
+                fetch("https://elibraryrestapi.herokuapp.com/elibrary/api/book/list").then(function (response) {
+                    response.json().then(function (data) {
+
+
+                        console.log(data);
+                        if (data.length > 0) {
+                            let temp = "";
+                            data.forEach(kas => {
+                                temp += "<tr>";
+                                temp += "<td>" + kas.bookId + "</td>";
+                                temp += "<td>" + kas.isbn + "</td>";
+                                temp += "<td>" + kas.title + "</td>";
+                                temp += "<td>" + kas.overdueFee + "</td>";
+                                temp += "<td>" + kas.publisher + "</td>";
+                                temp += "<td>" + kas.datePublished + "</td></tr>";
+
+                            })
+
+                            document.getElementById("data").innerHTML = temp;
+                        }
+
+
+                    });
+                });
+
+
+            </script>
+
+
+        </div>
+
 
         <div class="footer">
             <button class="btn btn-primary btn-block"> &copy;kasahun tehone ©febrary 2021</button>
-            </div>
+        </div>
     </div>
 
 
